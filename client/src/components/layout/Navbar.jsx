@@ -7,12 +7,10 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Close mobile menu when clicking on a link
   const closeMobileMenu = () => {
     setIsMenuOpen(false);
   };
 
-  // Add scroll effect to navbar
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -28,7 +26,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 backdrop-blur-md bg-white/80 border border-white/20  ${
+      className={`font-inter sticky top-0 z-50 transition-all duration-300 backdrop-blur-md bg-white/85 border border-white/20  ${
         isScrolled ? "bg-white shadow-md" : "bg-white shadow-sm"
       }`}
       role="banner"
@@ -49,7 +47,7 @@ const Navbar = () => {
                 width="40"
                 height="40"
               />
-              <h1 className="text-sm md:text-md font-bold text-[#0C5A2D] leading-tight">
+              <h1 className="text-sm md:text-md font-bold text-gray-900 leading-tight">
                 HIGHBRIDGE
                 <br className="block" />
                 CITY SOLUTIONS
@@ -64,21 +62,21 @@ const Navbar = () => {
           >
             <Link
               to="/services"
-              className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200"
+              className="text-gray-700 hover:text-[#14844A] font-medium transition-colors duration-200"
               onClick={closeMobileMenu}
             >
               Services
             </Link>
             <Link
               to="/about"
-              className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200"
+              className="text-gray-700 hover:text-[#14844A] font-medium transition-colors duration-200"
               onClick={closeMobileMenu}
             >
               About
             </Link>
             <Link
               to="/portfolio"
-              className="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200"
+              className="text-gray-700 hover:text-[#14844A] font-medium transition-colors duration-200"
               onClick={closeMobileMenu}
             >
               Portfolio
@@ -86,10 +84,9 @@ const Navbar = () => {
 
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center bg-[#0C5A2D] hover:bg-[#0a4a26] text-white px-6 py-3 rounded-full font-medium transition-colors duration-300 group shadow-md hover:shadow-lg"
+              className="r bg-[#0C5A2D] hover:bg-[#0a4a26] text-white px-6 py-3 rounded-full font-medium transition-colors duration-300 group shadow-md hover:shadow-lg"
               onClick={closeMobileMenu}
             >
-              <MessageCircle className="w-5 h-5 mr-2" />
               Contact Us
             </Link>
           </nav>
@@ -142,7 +139,7 @@ const Navbar = () => {
       <div
         className={`md:hidden  ${
           isMenuOpen ? "block" : "hidden"
-        } border-t border-white`}
+        } border-t border-gray-300`}
         role="navigation"
       >
         <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
@@ -169,10 +166,9 @@ const Navbar = () => {
           </Link>
           <Link
             to="/contact"
-            className="inline-flex items-center justify-center bg-[#0C5A2D] hover:bg-[#0a4a26] text-white px-6 py-3 rounded-full font-medium transition-colors duration-300 group shadow-md hover:shadow-lg"
+            className="inline-flex justify-center items-center  w-full  bg-[#0C5A2D] hover:bg-[#0a4a26] text-white px-6 py-2.5 sm:py-3  rounded-full font-medium transition-colors duration-300 group shadow-md hover:shadow-lg"
             onClick={closeMobileMenu}
           >
-            <MessageCircle className="w-5 h-5 mr-2" />
             Contact Us
           </Link>
         </div>
