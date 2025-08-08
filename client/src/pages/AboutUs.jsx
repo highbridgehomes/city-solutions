@@ -82,26 +82,35 @@ const About = () => {
   return (
     <>
       <Navbar />
+      <section className="font-inter pt-18 pb-12 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative">
+          <div className="flex flex-col items-center text-center">
+            {/* Label */}
+            <span className="inline-block px-5 py-2 bg-[#0C5A2D]/10 text-[#0C5A2D] rounded-full text-sm font-medium mb-6">
+              About Us
+            </span>
 
-      <section className="font-inter relative h-[50vh] md:h-[70vh] overflow-hidden ">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30 z-10"></div>
-        <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-          alt="Highbridge City Solutions office"
-          className="absolute top-0 left-0 w-full h-full object-cover z-0 "
-        />
-        <div className="relative z-20 h-full flex items-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white w-full py-12">
-            <div className="max-w-2xl mx-auto text-center sm:text-left">
-              <h1 className="font-playfair-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight">
-                About Highbridge <br className="hidden sm:block" />
-                City Solutions
-              </h1>
-              <p className="text-lg sm:text-xl mb-10 opacity-90 leading-relaxed max-w-xl mx-auto sm:mx-0">
-                Premier interior design company transforming spaces across Lagos
-                and beyond.
-              </p>
+            <h2 className="font-playfair-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 max-w-4xl leading-tight">
+              Designing <span className="text-[#0C5A2D]">Spaces</span>, Shaping{" "}
+              <span className="text-[#0C5A2D]">Experiences</span>
+            </h2>
+
+            {/* Decorative Divider */}
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="h-px bg-gray-300 w-16"></div>
+              <div className="h-2 w-2 bg-[#0C5A2D] rounded-full"></div>
+              <div className="h-px bg-gray-300 w-16"></div>
             </div>
+
+            {/* Description */}
+            <p className="text-gray-600 text-lg max-w-3xl leading-relaxed">
+              At{" "}
+              <span className="font-semibold text-gray-900 mr-1">
+                Highbridge City Solutions
+              </span>
+              we turn spaces into timeless statements — blending style,
+              functionality, and unmatched craftsmanship.
+            </p>
           </div>
         </div>
       </section>

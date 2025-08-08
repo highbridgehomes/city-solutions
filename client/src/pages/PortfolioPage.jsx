@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { useState } from "react";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 
@@ -111,11 +109,10 @@ const Portfolio = () => {
     <>
       <Navbar />
 
-      {/* Hero Section */}
       <section className="font-inter relative h-[50vh] md:h-[70vh] overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30 z-10"></div>
         <img
-          src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2032&q=80"
           alt="Portfolio showcase"
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         />
@@ -134,17 +131,16 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Portfolio Filter Section */}
-      <section className="font-inter py-12 bg-white sticky top-0 z-10 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
+      <section className="font-inter py-3 bg-white sticky top-16 sm:top-20 z-10 shadow-sm ">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="flex justify-start items-center sm:justify-center gap-2 sm:gap-4 overflow-x-auto scrollbar-hide w-full px-2">
             {filters.map((filter) => (
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-4 py-2 rounded-full text-sm sm:text-base font-medium transition-all duration-300 ${
+                className={`px-4 py-2 rounded-full text-sm sm:text-base font-medium whitespace-nowrap transition-all duration-300 flex-shrink-0 ${
                   activeFilter === filter
-                    ? "bg-[#0C5A2D] text-white"
+                    ? "bg-[#0C5A2D] text-white shadow-md"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
               >
@@ -190,43 +186,6 @@ const Portfolio = () => {
               </h3>
             </div>
           )}
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="font-inter relative py-20 md:py-32 text-white overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-            alt="Contact us background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-[#0C5A2D]/80 backdrop-blur-sm"></div>
-        </div>
-
-        <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 lg:px-10 text-center">
-          <h2 className="font-playfair-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-            Do you need interior design expertise?
-          </h2>
-          <div className="w-24 h-1 bg-white/80 mx-auto mb-8"></div>
-          <p className="text-lg sm:text-xl mb-10 opacity-95 max-w-3xl mx-auto">
-            Contact our team of design experts to discuss your project
-            requirements and vision.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-            <Link
-              to="/contact"
-              className="bg-white hover:bg-gray-100 text-[#0C5A2D] px-8 py-3.5 sm:py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl"
-            >
-              Get in Touch
-            </Link>
-            <Link
-              to="/services"
-              className="bg-transparent border-2 border-white hover:bg-white/20 px-8 py-3.5 sm:py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl"
-            >
-              Our Services
-            </Link>
-          </div>
         </div>
       </section>
 

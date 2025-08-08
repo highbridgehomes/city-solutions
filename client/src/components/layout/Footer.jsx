@@ -100,7 +100,7 @@ const Footer = () => {
                   { to: "/about", text: "About Us" },
                   { to: "/services", text: "Our Services" },
                   { to: "/projects", text: "Projects" },
-                  { to: "/contact", text: "Contact" },
+                  { to: "/faq", text: "FAQ" },
                 ].map(({ to, text }, i) => (
                   <li key={i}>
                     <Link
@@ -135,10 +135,14 @@ const Footer = () => {
                 } md:block text-gray-300`}
               >
                 {[
-                  { to: "/privacy-policy", text: "Privacy Policy" },
-                  { to: "/terms-of-service", text: "Terms of Service" },
-                  { to: "/faq", text: "FAQ" },
-                  { to: "/careers", text: "Careers" },
+                  {
+                    to: "https://www.highbridgegroup.org/",
+                    text: "Highbridge Group",
+                  },
+                  {
+                    to: "https://www.highbridgegroup.org/highbridge-homes",
+                    text: "Highbridge Homes Ltd",
+                  },
                 ].map(({ to, text }, i) => (
                   <li key={i}>
                     <Link
