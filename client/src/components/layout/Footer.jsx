@@ -99,8 +99,8 @@ const Footer = () => {
                 {[
                   { to: "/about", text: "About Us" },
                   { to: "/services", text: "Our Services" },
-                  { to: "/projects", text: "Projects" },
-                  { to: "/faq", text: "FAQ" },
+                  { to: "/portfolio", text: "Our Portfolio" },
+                  { to: "/frequently-asked-questions", text: "FAQ" },
                 ].map(({ to, text }, i) => (
                   <li key={i}>
                     <Link
@@ -227,7 +227,7 @@ const Footer = () => {
               {[
                 { to: "/privacy-policy", text: "Privacy Policy" },
                 { to: "/terms-of-service", text: "Terms of Service" },
-                { to: "/cookies", text: "Cookie Policy" },
+                { to: "/cookie-policy", text: "Cookie Policy" },
               ].map(({ to, text }, i) => (
                 <Link
                   key={i}

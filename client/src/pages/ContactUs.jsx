@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
+import axios from "axios";
+import toast from "react-hot-toast";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
     message: "",
   });
 
@@ -17,24 +20,33 @@ const Contact = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    try {
+      await axios.post("https://api.highbridgegroup.ng/api/contact", formData);
 
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+      toast.success("Thank you, Highbridge Group has received your message.");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error(error);
+      const message =
+        error.response?.data?.message || "An error occurred. Please try again.";
+      toast.error(message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <>
+      <Helmet>
+        <title>Contact | Highbridge City Solutions</title>
+      </Helmet>
       <Navbar />
 
-      <section className="font-inter relative h-[50vh] md:h-[70vh] overflow-hidden">
+      <section className="font-inter relative h-[50vh] overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-[#0C5A2D] to-[#08311C]"></div>
 
@@ -61,7 +73,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="font-inter  py-20  bg-white">
+      <section className="font-inter py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="bg-gray-50 p-8 rounded-xl shadow-sm">
@@ -113,24 +125,6 @@ const Contact = () => {
 
                 <div>
                   <label
-                    htmlFor="subject"
-                    className="block text-gray-700 font-medium mb-2"
-                  >
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0C5A2D]"
-                  />
-                </div>
-
-                <div>
-                  <label
                     htmlFor="message"
                     className="block text-gray-700 font-medium mb-2"
                   >
@@ -149,9 +143,10 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-[#0C5A2D] hover:bg-[#0a4a26] text-white py-4 px-6 rounded-full font-medium transition-colors duration-300"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#0C5A2D] hover:bg-[#0a4a26] disabled:bg-gray-400 disabled:cursor-not-allowed text-white py-4 px-6 rounded-full font-medium transition-colors duration-300"
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
             </div>

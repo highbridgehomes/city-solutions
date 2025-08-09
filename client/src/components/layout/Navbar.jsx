@@ -60,13 +60,7 @@ const Navbar = () => {
             className="hidden md:flex items-center space-x-8 text-lg"
             aria-label="Main navigation"
           >
-            <Link
-              to="/services"
-              className="text-gray-700 hover:text-[#14844A] font-medium transition-colors duration-200"
-              onClick={closeMobileMenu}
-            >
-              Services
-            </Link>
+            {" "}
             <Link
               to="/about"
               className="text-gray-700 hover:text-[#14844A] font-medium transition-colors duration-200"
@@ -75,13 +69,19 @@ const Navbar = () => {
               About
             </Link>
             <Link
+              to="/services"
+              className="text-gray-700 hover:text-[#14844A] font-medium transition-colors duration-200"
+              onClick={closeMobileMenu}
+            >
+              Services
+            </Link>
+            <Link
               to="/portfolio"
               className="text-gray-700 hover:text-[#14844A] font-medium transition-colors duration-200"
               onClick={closeMobileMenu}
             >
               Portfolio
             </Link>
-
             <Link
               to="/contact"
               className="r bg-[#0C5A2D] hover:bg-[#0a4a26] text-white px-6 py-3 rounded-full font-medium transition-colors duration-300 group shadow-md hover:shadow-lg"
@@ -144,19 +144,20 @@ const Navbar = () => {
       >
         <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
           <Link
-            to="/services"
-            className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-            onClick={closeMobileMenu}
-          >
-            Services
-          </Link>
-          <Link
             to="/about"
             className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
             onClick={closeMobileMenu}
           >
             About
           </Link>
+          <Link
+            to="/services"
+            className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+            onClick={closeMobileMenu}
+          >
+            Services
+          </Link>
+
           <Link
             to="/portfolio"
             className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"

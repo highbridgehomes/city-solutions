@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const galleryImages = [
   {
@@ -51,6 +52,15 @@ const galleryImages = [
     category: "Wellness",
   },
 ];
+
+// Define green color palette
+const colors = {
+  primary: "#0C5A2D", // Dark green
+  secondary: "#1D7A4C", // Medium green
+  accent: "#2E9D64", // Bright green
+  light: "#E8F5E9", // Very light green
+  muted: "#A5D6A7", // Soft muted green
+};
 
 const OurGallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -109,47 +119,49 @@ const OurGallery = () => {
 
   return (
     <section className="font-inter bg-gray-50 py-20 sm:py-32 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="text-center mb-16">
-          <h2 className=" text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-            <span className="text-[#0C5A2D]">Project</span> Gallery
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            Our Project<span style={{ color: colors.primary }}> Gallery</span>
           </h2>
-          <div className="flex justify-center items-center gap-4">
-            <div className="h-px bg-[#0C5A2D] w-16"></div>
-            <div className="h-2 w-2 bg-[#0C5A2D] rounded-full"></div>
-            <div className="h-px bg-[#0C5A2D] w-16"></div>
-          </div>
-          <p className="text-gray-600 text-lg  mt-8 max-w-2xl mx-auto">
+          <div
+            className="w-20 h-1 mx-auto mt-4"
+            style={{ backgroundColor: colors.primary }}
+          ></div>
+          <p className="text-gray-600 text-lg mt-6 max-w-3xl mx-auto">
             Explore our portfolio of premium interior design projects that
             showcase our expertise and attention to detail.
           </p>
         </div>
 
-        <div className="relative group">
+        <div className="relative">
+          {/* Prev Button */}
           <button
             onClick={prev}
             className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-8 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-[#0C5A2D] hover:text-white transition-all duration-300 ${
               currentIndex === 0
                 ? "opacity-50 cursor-not-allowed"
-                : "opacity-0 group-hover:opacity-100"
+                : "opacity-100"
             }`}
             aria-label="Previous"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
 
+          {/* Next Button */}
           <button
             onClick={next}
             className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-8 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-[#0C5A2D] hover:text-white transition-all duration-300 ${
               currentIndex >= maxIndex
                 ? "opacity-50 cursor-not-allowed"
-                : "opacity-0 group-hover:opacity-100"
+                : "opacity-100"
             }`}
             aria-label="Next"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
 
+          {/* Images */}
           <div className="overflow-hidden rounded-xl">
             <div
               className="flex transition-transform duration-500 ease-in-out"
@@ -169,14 +181,15 @@ const OurGallery = () => {
                   className="flex-shrink-0 px-2"
                   style={{ width: `${100 / visibleImages}%` }}
                 >
-                  <div className="relative aspect-[16/9] lg:aspect-[4/3] max-h-[40vh] lg:max-h-none overflow-hidden rounded-lg group-hover:shadow-lg transition-shadow duration-300">
+                  <div className="relative aspect-[16/9] lg:aspect-[4/3] max-h-[40vh] lg:max-h-none overflow-hidden rounded-lg shadow-lg transition-shadow duration-300">
                     <img
                       src={image.url}
                       alt={image.alt}
-                      className="w-full h-full object-fit sm:object-cover  object-center max-h-[60vh] lg:max-h-none"
+                      className="w-full h-full object-cover object-center max-h-[60vh] lg:max-h-none"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3 lg:p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {/* Always visible overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3 lg:p-6 opacity-100 transition-opacity duration-300">
                       <div>
                         <span className="inline-block px-2 py-0.5 sm:px-3 lg:py-1 bg-[#0C5A2D] text-white text-[10px] sm:text-xs font-medium rounded-full mb-1 sm:mb-2">
                           {image.category}
@@ -192,6 +205,7 @@ const OurGallery = () => {
             </div>
           </div>
 
+          {/* Dots */}
           <div className="flex justify-center gap-2 mt-8">
             {dots.map((dot, idx) => (
               <button
@@ -208,11 +222,15 @@ const OurGallery = () => {
           </div>
         </div>
 
+        {/* Button */}
         <div className="text-center mt-12">
-          <button className="inline-flex items-center justify-center bg-[#0C5A2D] hover:bg-[#0a4a26] text-white px-8 py-4 rounded-full font-medium transition-colors duration-300 group">
+          <Link
+            to="/portfolio"
+            className="inline-flex items-center justify-center bg-[#0C5A2D] hover:bg-[#0a4a26] text-white px-8 py-4 rounded-full font-medium transition-colors duration-300 group"
+          >
             View Full Portfolio
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>
