@@ -1,23 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  HardHat,
-  Home,
-  Building,
-  Shield,
-  Lock,
-  Hammer,
-  Wrench,
-  Box,
-  Bed,
-  Utensils,
-  ArrowRight,
-  ChevronRight,
-  ArrowUpRight,
-  Trophy,
-  Calendar,
-  Play,
-} from "lucide-react";
+import { HardHat, Hammer, Box, Bed, Utensils } from "lucide-react";
 import { IMAGES } from "../constants/images";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
@@ -33,8 +16,8 @@ const Services = () => {
               Our Services
             </span>
             <h2 className="font-playfair-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 max-w-4xl leading-tight">
-              Transforming Spaces with{" "}
-              <span className="text-[#0C5A2D]">Expert Craftsmanship</span>
+              Transforming Spaces with
+              <span className="text-[#0C5A2D]"> Expert Craftsmanship</span>
             </h2>
             <div className="flex items-center justify-center gap-4 mb-8">
               <div className="h-px bg-gray-300 w-16"></div>
@@ -56,8 +39,7 @@ const Services = () => {
           <div>
             <div className="relative h-96 w-full rounded-2xl overflow-hidden mb-12 shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                alt="Renovation & Construction"
+                src={IMAGES.renovation1}
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
@@ -73,12 +55,12 @@ const Services = () => {
                     <div className="bg-[#0C5A2D]/10 w-16 h-16 rounded-xl flex items-center justify-center">
                       <Hammer className="h-8 w-8 text-[#0C5A2D]" />
                     </div>
-                    <h3 className="text-3xl sm:text-4xl font-bold text-gray-700">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-700">
                       Renovation & Construction
                     </h3>
                   </div>
                 </div>
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
                   From concept to completion, we bring spaces back to life with
                   precision and style. Our renovation and construction services
                   cover everything from structural upgrades to full-scale
@@ -89,7 +71,7 @@ const Services = () => {
               </div>
               <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  src={IMAGES.renovation2}
                   alt="Renovation work"
                   className="w-full h-full object-cover"
                 />
@@ -104,7 +86,7 @@ const Services = () => {
           <div>
             <div className="relative h-96 w-full rounded-2xl overflow-hidden mb-12 shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src={IMAGES.metalWork1}
                 alt="Metal Work"
                 className="w-full h-full object-cover"
               />
@@ -121,12 +103,12 @@ const Services = () => {
                     <div className="bg-[#0C5A2D]/10 w-16 h-16 rounded-xl flex items-center justify-center">
                       <HardHat className="h-8 w-8 text-[#0C5A2D]" />
                     </div>
-                    <h3 className="text-3xl sm:text-4xl font-bold text-gray-700">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-700">
                       Metal Work
                     </h3>
                   </div>
                 </div>
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
                   We craft durable, elegant, and functional metal solutions for
                   both residential and commercial needs. Our metalwork includes
                   gates, railings, window protectors, steel structures, and more
@@ -137,7 +119,7 @@ const Services = () => {
               </div>
               <div className="lg:order-1 relative h-80 rounded-xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+                  src={IMAGES.metalWork2}
                   alt="Metal fabrication"
                   className="w-full h-full object-cover"
                 />
@@ -152,7 +134,7 @@ const Services = () => {
           <div>
             <div className="relative h-96 w-full rounded-2xl overflow-hidden mb-12 shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src={IMAGES.kitchen1}
                 alt="Kitchen Set"
                 className="w-full h-full object-cover"
               />
@@ -169,12 +151,12 @@ const Services = () => {
                     <div className="bg-[#0C5A2D]/10 w-16 h-16 rounded-xl flex items-center justify-center">
                       <Utensils className="h-8 w-8 text-[#0C5A2D]" />
                     </div>
-                    <h3 className="text-3xl sm:text-4xl font-bold text-gray-700">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-700">
                       Kitchen Set
                     </h3>
                   </div>
                 </div>
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <p className="text-gray-600 text-base sm:text-lg  leading-relaxed">
                   Your kitchen deserves the perfect blend of beauty and
                   function. Our custom kitchen sets are designed to maximize
                   space, improve workflow, and elevate your lifestyle. We offer
@@ -186,7 +168,7 @@ const Services = () => {
               </div>
               <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  src={IMAGES.kitchen2}
                   alt="Kitchen design"
                   className="w-full h-full object-cover"
                 />
@@ -201,7 +183,7 @@ const Services = () => {
           <div>
             <div className="relative h-96 w-full rounded-2xl overflow-hidden mb-12 shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src={IMAGES.bedroomService1}
                 alt="Bedroom"
                 className="w-full h-full object-cover"
               />
@@ -218,12 +200,12 @@ const Services = () => {
                     <div className="bg-[#0C5A2D]/10 w-16 h-16 rounded-xl flex items-center justify-center">
                       <Bed className="h-8 w-8 text-[#0C5A2D]" />
                     </div>
-                    <h3 className="text-3xl sm:text-4xl font-bold text-gray-700">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-700">
                       Bedroom
                     </h3>
                   </div>
                 </div>
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <p className="text-gray-600 text-base sm:text-lg  leading-relaxed">
                   We create serene, stylish bedroom solutions tailored to your
                   personal taste and space. From wardrobes and bed frames to
                   lighting and layouts, our bedroom interiors are crafted for
@@ -235,7 +217,7 @@ const Services = () => {
               </div>
               <div className="lg:order-1 relative h-80 rounded-xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  src={IMAGES.bedroomService2}
                   alt="Bedroom design"
                   className="w-full h-full object-cover"
                 />
@@ -250,7 +232,7 @@ const Services = () => {
           <div>
             <div className="relative h-96 w-full rounded-2xl overflow-hidden mb-12 shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src={IMAGES.handmade1}
                 alt="Handmade Products"
                 className="w-full h-full object-cover"
               />
@@ -267,12 +249,12 @@ const Services = () => {
                     <div className="bg-[#0C5A2D]/10 w-16 h-16 rounded-xl flex items-center justify-center">
                       <Box className="h-8 w-8 text-[#0C5A2D]" />
                     </div>
-                    <h3 className="text-3xl sm:text-4xl font-bold text-gray-700">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-700">
                       Handmade Products
                     </h3>
                   </div>
                 </div>
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <p className="text-gray-600 text-base sm:text-lg  leading-relaxed">
                   Our handmade collections showcase the art of craftsmanship.
                   Each item—be it furniture, décor, or utility pieces—is
                   uniquely designed and manually crafted with attention to
@@ -284,7 +266,7 @@ const Services = () => {
               </div>
               <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  src={IMAGES.handmade2}
                   alt="Handmade furniture"
                   className="w-full h-full object-cover"
                 />

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
+import { IMAGES } from "../constants/images";
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -10,93 +11,143 @@ const Portfolio = () => {
     "Bedroom",
     "Work Space",
     "Living Room",
-    "Dinning Room",
+    "Dining Room",
   ];
 
   const projects = [
     {
       id: 1,
-      title: "Ethnic Studio Interior",
-      category: "Living Room",
-      image:
-        "https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      title: "Minimalist Master Bedroom",
+      category: "Bedroom",
+      image: IMAGES.bedroom1,
     },
     {
       id: 2,
-      title: "Cozy Bedroom Interior",
+      title: "Cozy Scandinavian Bedroom",
       category: "Bedroom",
-      image:
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2032&q=80",
+      image: IMAGES.bedroom2,
     },
     {
       id: 3,
-      title: "Home Office Interior",
-      category: "Work Space",
-      image:
-        "https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
+      title: "Luxurious Hotel Style Bedroom",
+      category: "Bedroom",
+      image: IMAGES.bedroom3,
     },
     {
       id: 4,
-      title: "Wooden Pallet Decor",
-      category: "Living Room",
-      image:
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2032&q=80",
+      title: "Boutique Hotel Bedroom",
+      category: "Bedroom",
+      image: IMAGES.bedroom4,
     },
     {
       id: 5,
-      title: "Creative Room Interior",
+      title: "Modern Home Office Setup",
       category: "Work Space",
-      image:
-        "https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+      image: IMAGES.workspace1,
     },
     {
       id: 6,
-      title: "Modern Industrial Interior",
-      category: "Living Room",
-      image:
-        "https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      title: "Minimalist Workspace",
+      category: "Work Space",
+      image: IMAGES.workspace2,
     },
     {
       id: 7,
-      title: "Modern Living Room",
-      category: "Living Room",
-      image:
-        "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      title: "Executive Office Design",
+      category: "Work Space",
+      image: IMAGES.workspace3,
     },
     {
       id: 8,
-      title: "Multifunctional Living Room",
-      category: "Living Room",
-      image:
-        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      title: "Tech Startup Office",
+      category: "Work Space",
+      image: IMAGES.workspace4,
     },
     {
       id: 9,
-      title: "White & Blue Apartment",
-      category: "Bedroom",
-      image:
-        "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      title: "Coworking Space Design",
+      category: "Work Space",
+      image: IMAGES.workspace5,
     },
     {
       id: 10,
-      title: "Colorful Living Room",
-      category: "Living Room",
-      image:
-        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      title: "Creative Agency Office",
+      category: "Work Space",
+      image: IMAGES.workspace6,
     },
     {
       id: 11,
-      title: "Modern Apartment Interior",
-      category: "Living Room",
-      image:
-        "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      title: "Corporate Boardroom",
+      category: "Work Space",
+      image: IMAGES.workspace7,
     },
     {
       id: 12,
-      title: "Elegant Dining Space",
-      category: "Dinning Room",
-      image:
-        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      title: "Mid-Century Modern Lounge",
+      category: "Living Room",
+      image: IMAGES.livingRoom1,
+    },
+    {
+      id: 13,
+      title: "Industrial Loft Living",
+      category: "Living Room",
+      image: IMAGES.livingRoom2,
+    },
+    {
+      id: 14,
+      title: "Mediterranean Style Lounge",
+      category: "Living Room",
+      image: IMAGES.livingRoom3,
+    },
+    {
+      id: 15,
+      title: "Small Apartment Living",
+      category: "Living Room",
+      image: IMAGES.livingRoom4,
+    },
+    {
+      id: 16,
+      title: "Eclectic Bohemian Living",
+      category: "Living Room",
+      image: IMAGES.livingRoom5,
+    },
+    {
+      id: 17,
+      title: "Traditional Family Room",
+      category: "Living Room",
+      image: IMAGES.livingRoom6,
+    },
+    {
+      id: 18,
+      title: "Japanese Minimalist Living",
+      category: "Living Room",
+      image: IMAGES.livingRoom7,
+    },
+
+    {
+      id: 19,
+      title: "Modern Bed Room",
+      category: "Bed Room",
+      image: IMAGES.bedroom1,
+    },
+
+    {
+      id: 20,
+      title: "Yellow Chilli Private Dining",
+      category: "Dining Room",
+      image: IMAGES.diningRoom1,
+    },
+    {
+      id: 21,
+      title: "Nok by Alára Chic Interior",
+      category: "Dining Room",
+      image: IMAGES.diningRoom2,
+    },
+    {
+      id: 22,
+      title: "Bogobiri House Artistic Dining",
+      category: "Dining Room",
+      image: IMAGES.diningRoom3,
     },
   ];
 
@@ -151,8 +202,7 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Portfolio Grid Section */}
-      <section className="font-inter py-12 bg-gray-50">
+      <section className="font-inter py-14  bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map((project) => (
@@ -160,13 +210,14 @@ const Portfolio = () => {
                 key={project.id}
                 className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
               >
-                <div className="aspect-w-4 aspect-h-3 overflow-hidden">
+                <div className="w-full aspect-[4/3] overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div className="text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     <span className="text-sm text-white/80">

@@ -33,7 +33,6 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
-          {/* Logo and Brand */}
           <div className="flex items-center gap-3">
             <Link
               to="/"
@@ -55,12 +54,10 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
           <nav
             className="hidden md:flex items-center space-x-8 text-lg"
             aria-label="Main navigation"
           >
-            {" "}
             <Link
               to="/about"
               className="text-gray-700 hover:text-[#14844A] font-medium transition-colors duration-200"
@@ -91,7 +88,6 @@ const Navbar = () => {
             </Link>
           </nav>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -135,7 +131,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <div
         className={`md:hidden  ${
           isMenuOpen ? "block" : "hidden"

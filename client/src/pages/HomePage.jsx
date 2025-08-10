@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  Building,
-  HardHat,
-  Map,
-  Leaf,
-  Users,
   Award,
-  ChevronRight,
   ArrowUpRight,
   ArrowRight,
   Trophy,
@@ -16,6 +10,7 @@ import {
   LayoutGrid,
   Armchair,
   Lamp,
+  Users,
   Paintbrush,
   Home as HomeIcon,
 } from "lucide-react";
@@ -25,13 +20,12 @@ import Footer from "../components/layout/Footer";
 import OurGallery from "../components/sections/Portfolio";
 import { Helmet } from "react-helmet-async";
 
-// Define green color palette
 const colors = {
-  primary: "#0C5A2D", // Dark green
-  secondary: "#1D7A4C", // Medium green
-  accent: "#2E9D64", // Bright green
-  light: "#E8F5E9", // Very light green
-  muted: "#A5D6A7", // Soft muted green
+  primary: "#0C5A2D",
+  secondary: "#1D7A4C",
+  accent: "#2E9D64",
+  light: "#E8F5E9",
+  muted: "#A5D6A7",
 };
 
 const HomePage = () => {
@@ -123,11 +117,9 @@ const HomePage = () => {
       </Helmet>
       <Navbar />
 
-      {/* Video Modal */}
       {videoModal.open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm">
           <div className="relative mx-4">
-            {/* Close Button */}
             <button
               onClick={closeVideoModal}
               className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
@@ -148,7 +140,6 @@ const HomePage = () => {
               </svg>
             </button>
 
-            {/* Fixed Size Video */}
             <div style={{ width: "900px", height: "506px" }}>
               <iframe
                 src={`https://www.youtube.com/embed/${videoModal.videoId}?autoplay=1`}
@@ -162,7 +153,6 @@ const HomePage = () => {
         </div>
       )}
 
-      {/* Hero Section - Updated with green accents */}
       <section className="font-inter relative h-[70vh] lg:h-[90vh] overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30 z-10"></div>
         <video
@@ -220,7 +210,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* About Section - Updated with green palette */}
       <section
         className="font-inter py-24 md:py-32"
         style={{ backgroundColor: colors.light }}
@@ -313,28 +302,27 @@ const HomePage = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="relative h-64 sm:h-80 rounded-lg overflow-hidden group">
                 <img
-                  src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                  src={IMAGES.aboutlibHome1}
                   alt="Luxury living room"
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="relative h-64 sm:h-80 rounded-lg overflow-hidden mt-8 group">
                 <img
-                  src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                  alt="Modern kitchen design"
+                  src={IMAGES.aboutlibHome2}
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="relative h-64 sm:h-80 rounded-lg overflow-hidden group">
                 <img
-                  src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                  src={IMAGES.aboutlibHome3}
                   alt="Elegant bedroom"
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="relative h-64 sm:h-80 rounded-lg overflow-hidden mt-8 group">
                 <img
-                  src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                  src={IMAGES.aboutlibHome4}
                   alt="Stylish office space"
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -344,7 +332,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Services Section - Updated with green palette */}
       <section
         className="font-inter py-24 md:py-32"
         style={{ backgroundColor: colors.light }}
@@ -414,7 +401,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Portfolio Section - Updated with green accents */}
       <section className="font-inter pt-24 sm:pt-40 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
@@ -437,21 +423,6 @@ const HomePage = () => {
                 combine functionality with aesthetic appeal.
               </p>
             </div>
-            {/* <Link
-              to="/portfolio"
-              className="flex items-center gap-2 group min-w-fit"
-            >
-              <span
-                className="font-medium text-lg border-b border-transparent group-hover:border-current transition-all duration-300"
-                style={{ color: colors.primary }}
-              >
-                View all projects
-              </span>
-              <ChevronRight
-                className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300"
-                style={{ color: colors.primary }}
-              />
-            </Link> */}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -493,7 +464,6 @@ const HomePage = () => {
 
       <OurGallery />
 
-      {/* CTA Section - Updated with green palette */}
       <section className="font-inter relative py-24 md:py-32 text-white overflow-hidden">
         <div
           className="absolute inset-0"
@@ -634,7 +604,6 @@ const HomePage = () => {
         ></div>
       </section>
 
-      {/* Partners Section - Updated with green accents */}
       <section className="font-inter py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">

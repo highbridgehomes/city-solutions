@@ -22,7 +22,7 @@ const TermsOfService = () => {
               <FileText className="h-5 w-5 mr-2" />
               <span className="font-medium">Terms of Service</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="font-playfair-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Our{" "}
               <span style={{ color: colors.primary }}>Terms & Conditions</span>
             </h2>
@@ -83,8 +83,6 @@ const TermsOfService = () => {
                 <li>Late payments may incur additional charges</li>
               </ul>
             </div>
-
-            {/* Continue with other sections... */}
 
             <div
               className="mt-16 p-6 rounded-xl"

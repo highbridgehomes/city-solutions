@@ -25,7 +25,6 @@ function App() {
     <>
       <ScrollManager />
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />

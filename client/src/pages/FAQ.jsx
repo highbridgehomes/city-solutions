@@ -154,7 +154,7 @@ const FAQPage = () => {
               <HelpCircle className="h-5 w-5 mr-2" />
               <span className="font-medium">FAQs</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="font-playfair-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Frequently{" "}
               <span style={{ color: colors.primary }}>Asked Questions</span>
             </h2>

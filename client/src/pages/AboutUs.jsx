@@ -6,49 +6,42 @@ import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 
 const About = () => {
-  const stats = [
-    { value: "97%", label: "Client Satisfaction" },
-    { value: "96%", label: "Projects Completed" },
-    { value: "100+", label: "Happy Clients" },
-    { value: "15+", label: "Years Experience" },
-  ];
-
   const steps = [
     {
       number: "1",
       title: "Contact & Consultation",
       description:
-        "Reach out to us via our contact form, email, or phone. We'll schedule a free consultation to understand your needs, goals, and vision.",
+        "Reach out to us via our contact form, email, or phone. We’ll schedule a free consultation to understand your needs, goals, and vision.",
     },
     {
       number: "2",
       title: "Project Discovery",
       description:
-        "We dive deeper into your requirements to assess scope, timelines, and feasibility.",
+        "We dive deeper into your requirements whether it’s property development, smart infrastructure, or urban planning to assess scope, timelines, and feasibility.",
     },
     {
       number: "3",
       title: "Proposal & Agreement",
       description:
-        "Our team presents a tailored proposal with project breakdown and cost estimates.",
+        "Our team presents a tailored proposal, complete with project breakdown, cost estimates, and clear deliverables. Once aligned, we formalize the agreement.",
     },
     {
       number: "4",
       title: "Planning & Design",
       description:
-        "We move into strategy and design, aligning with regulatory standards and community needs.",
+        "We move into strategy and design, aligning with regulatory standards, community needs, and future proof solutions. You’ll receive mockups or models where applicable.",
     },
     {
       number: "5",
       title: "Execution & Supervision",
       description:
-        "Your project is brought to life by our expert team—on-site, on time, and on budget.",
+        "Your project is brought to life by our expert team on site, on time, and on budget. We provide regular updates and ensure quality at every stage.",
     },
     {
       number: "6",
       title: "Handover & Support",
       description:
-        "Upon completion, we deliver a fully functional solution with after-service support.",
+        "Upon completion, we deliver a fully functional, high impact solution. We remain available for after service support, maintenance, or upgrades.",
     },
   ];
 
@@ -85,7 +78,6 @@ const About = () => {
       <section className="font-inter pt-18 pb-12 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative">
           <div className="flex flex-col items-center text-center">
-            {/* Label */}
             <span className="inline-block px-5 py-2 bg-[#0C5A2D]/10 text-[#0C5A2D] rounded-full text-sm font-medium mb-6">
               About Us
             </span>
@@ -95,20 +87,18 @@ const About = () => {
               <span className="text-[#0C5A2D]">Experiences</span>
             </h2>
 
-            {/* Decorative Divider */}
             <div className="flex items-center justify-center gap-4 mb-8">
               <div className="h-px bg-gray-300 w-16"></div>
               <div className="h-2 w-2 bg-[#0C5A2D] rounded-full"></div>
               <div className="h-px bg-gray-300 w-16"></div>
             </div>
 
-            {/* Description */}
             <p className="text-gray-600 text-lg max-w-3xl leading-relaxed">
               At{" "}
               <span className="font-semibold text-gray-900 mr-1">
                 Highbridge City Solutions
               </span>
-              we turn spaces into timeless statements — blending style,
+              we turn spaces into timeless statements blending style,
               functionality, and unmatched craftsmanship.
             </p>
           </div>
@@ -129,23 +119,28 @@ const About = () => {
 
               <div className="space-y-6">
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  Highbridge City Solutions is a premier interior design company
-                  based in Lagos, Nigeria, and a proud subsidiary of the
-                  renowned Highbridge Group.
+                  We are passionate about transforming spaces into elegant,
+                  functional, and inspiring environments that reflect the unique
+                  taste and lifestyle of our clients. From sleek modern
+                  apartments to high end commercial spaces, our designs blend
+                  creativity, comfort, and timeless style.
                 </p>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  We specialize in transforming spaces into elegant, functional,
-                  and inspiring environments that reflect the unique taste and
-                  lifestyle of our clients.
+                  Our journey began with a vision to redefine interior design in
+                  Nigeria by combining global design trends with local artistry.
+                  Over the years, we have built a reputation for delivering
+                  bespoke solutions for residential, commercial, and luxury real
+                  estate projects.
                 </p>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  With a deep understanding of contemporary design trends and a
-                  commitment to excellence, we offer bespoke interior design
-                  solutions for residential, commercial, and luxury real estate
-                  projects. Our team of creative designers, architects, and
-                  project managers work collaboratively to deliver aesthetically
-                  pleasing and structurally sound interiors that exceed
-                  expectations.
+                  At Highbridge City Solutions, we believe that great design is
+                  more than aesthetics it’s about creating experiences. That’s
+                  why our team of creative designers, skilled architects, and
+                  dedicated project managers work collaboratively from concept
+                  to completion, ensuring every detail is thoughtfully crafted.
+                  With a commitment to excellence and innovation, we continue to
+                  shape interiors that inspire, uplift, and stand the test of
+                  time.
                 </p>
               </div>
 
@@ -163,28 +158,28 @@ const About = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="relative h-64 sm:h-80 rounded-lg overflow-hidden group">
                 <img
-                  src="https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
-                  alt="Our office"
+                  src={IMAGES.aboutPage1}
+                  alt="About us"
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="relative h-64 sm:h-80 rounded-lg overflow-hidden mt-8 group">
                 <img
-                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
-                  alt="Our team"
+                  src={IMAGES.aboutPage2}
+                  alt="About us"
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="relative h-64 sm:h-80 rounded-lg overflow-hidden group">
                 <img
-                  src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                  alt="Our projects"
+                  src={IMAGES.aboutPage3}
+                  alt="About us"
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="relative h-64 sm:h-80 rounded-lg overflow-hidden mt-8 group">
                 <img
-                  src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  src={IMAGES.aboutlibHome2}
                   alt="Our designs"
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -210,10 +205,11 @@ const About = () => {
                 MISSION
               </h3>
               <p className="text-gray-700 text-lg">
-                At Highbridge City Solutions, our mission is to design and
-                deliver innovative real estate, energy, and urban development
-                projects that improve quality of life, empower communities, and
-                drive economic growth—one city at a time.
+                To design and deliver innovative real estate, energy, and urban
+                development projects that improve quality of life, empower
+                communities, and drive economic growth one city at a time. We
+                achieve this through strategic partnerships, cutting edge
+                technology, and a commitment to excellence in execution.
               </p>
             </div>
           </div>
@@ -264,7 +260,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="font-inter py-20 bg-white">
+      <section className="font-inter py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className=" text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
@@ -272,7 +268,7 @@ const About = () => {
             </h2>
             <div className="w-20 h-1 bg-[#0C5A2D] mx-auto mt-4"></div>
             <p className="text-gray-700 text-lg mt-6 max-w-3xl mx-auto">
-              At Highbridge City Solutions, we don't just build structures—we
+              At Highbridge City Solutions, we don't just build structures we
               create systems that power the future of cities.
             </p>
           </div>
@@ -304,28 +300,6 @@ const About = () => {
               combine real estate development, infrastructure, energy, and
               technology to solve today's most pressing city challenges.
             </p>
-            <Link
-              to="/services"
-              className="inline-flex items-center justify-center bg-[#0C5A2D] hover:bg-[#0a4a26] text-white px-8 py-4 rounded-full font-medium transition-colors duration-300 group"
-            >
-              Explore Our Services
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="font-inter py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-[#0C5A2D] mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-gray-700">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

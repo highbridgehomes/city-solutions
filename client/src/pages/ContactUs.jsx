@@ -76,7 +76,7 @@ const Contact = () => {
       <section className="font-inter py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-gray-50 p-8 rounded-xl shadow-sm">
+            <div className="bg-gray-50 py-8 px-4 rounded-xl shadow-sm">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Tell us about your dream
               </h2>
@@ -151,18 +151,15 @@ const Contact = () => {
               </form>
             </div>
 
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Reach out to us today
-                </h2>
-                <p className="text-gray-600">
-                  Whether you're looking to partner, invest, or inquire about
-                  our services. Let's build the future of cities together.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-xl">
+            <div className="bg-gray-50 py-8 px-4 rounded-xl shadow-sm">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Reach out to us today
+              </h2>
+              <p className="text-gray-600">
+                Whether you're looking to partner, invest, or inquire about our
+                services. Let's build the future of cities together.
+              </p>
+              <div className="bg-gray-50 p-6 rounded-xl space-y-6">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="bg-[#0C5A2D]/10 p-3 rounded-full">
                     <MapPin className="h-6 w-6 text-[#0C5A2D]" />
@@ -221,24 +218,6 @@ const Contact = () => {
                     </p>
                   </div>
                 </div>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-xl">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  Projects
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  At Highbridge City Solutions, we specialize in delivering
-                  forward-thinking, impact-driven projects across real estate,
-                  urban infrastructure, energy, and smart city solutions.
-                </p>
-                <Link
-                  to="/portfolio"
-                  className="inline-flex items-center text-[#0C5A2D] font-medium hover:underline group"
-                >
-                  Browse Projects
-                  <ArrowRight className="ml-1 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
               </div>
             </div>
           </div>

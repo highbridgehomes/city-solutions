@@ -1,65 +1,65 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { IMAGES } from "../../constants/images";
 
 const galleryImages = [
   {
     id: 1,
-    url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    alt: "Luxury hotel pool area with modern design",
-    category: "Exterior",
+    url: IMAGES.livingRoom1,
+    alt: "Spacious living room with modern furniture and decor",
+    category: "Living Room",
   },
   {
     id: 2,
-    url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    alt: "Elegant hotel bedroom with premium furnishings",
-    category: "Interior",
+    url: IMAGES.diningRoom1,
+    alt: "Elegant dining room with premium furnishings",
+    category: "Dining Room",
   },
   {
     id: 3,
-    url: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    alt: "Gourmet restaurant dining experience",
-    category: "Dining",
+    url: IMAGES.bedroom3,
+    alt: "Cozy bedroom with stylish bedding and warm lighting",
+    category: "Bedroom",
   },
   {
     id: 4,
-    url: "https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    alt: "Poolside dining with scenic views",
-    category: "Amenities",
+    url: IMAGES.livingRoom5,
+    alt: "Contemporary living room with large windows and bright accents",
+    category: "Living Room",
   },
   {
     id: 5,
-    url: "https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    alt: "Luxury hotel lounge with sophisticated decor",
-    category: "Interior",
+    url: IMAGES.bedroom4,
+    alt: "Luxury bedroom with sophisticated design and comfortable bed",
+    category: "Bedroom",
   },
   {
     id: 6,
-    url: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    alt: "Modern hotel reception area",
-    category: "Lobby",
+    url: IMAGES.workspace6,
+    alt: "Modern workspace with sleek desk and ergonomic chair",
+    category: "Workspace",
   },
   {
     id: 7,
-    url: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    alt: "Fine dining restaurant setting",
-    category: "Dining",
+    url: IMAGES.diningRoom3,
+    alt: "Fine dining setup with elegant tableware and lighting",
+    category: "Dining Room",
   },
   {
     id: 8,
-    url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    alt: "Luxury spa relaxation area",
-    category: "Wellness",
+    url: IMAGES.workspace6,
+    alt: "Minimalist workspace with clean lines and open space",
+    category: "Workspace",
   },
 ];
 
-// Define green color palette
 const colors = {
-  primary: "#0C5A2D", // Dark green
-  secondary: "#1D7A4C", // Medium green
-  accent: "#2E9D64", // Bright green
-  light: "#E8F5E9", // Very light green
-  muted: "#A5D6A7", // Soft muted green
+  primary: "#0C5A2D",
+  secondary: "#1D7A4C",
+  accent: "#2E9D64",
+  light: "#E8F5E9",
+  muted: "#A5D6A7",
 };
 
 const OurGallery = () => {
@@ -135,7 +135,6 @@ const OurGallery = () => {
         </div>
 
         <div className="relative">
-          {/* Prev Button */}
           <button
             onClick={prev}
             className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-8 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-[#0C5A2D] hover:text-white transition-all duration-300 ${
@@ -148,7 +147,6 @@ const OurGallery = () => {
             <ChevronLeft className="w-6 h-6" />
           </button>
 
-          {/* Next Button */}
           <button
             onClick={next}
             className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-8 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-[#0C5A2D] hover:text-white transition-all duration-300 ${
@@ -161,7 +159,6 @@ const OurGallery = () => {
             <ChevronRight className="w-6 h-6" />
           </button>
 
-          {/* Images */}
           <div className="overflow-hidden rounded-xl">
             <div
               className="flex transition-transform duration-500 ease-in-out"
@@ -188,7 +185,7 @@ const OurGallery = () => {
                       className="w-full h-full object-cover object-center max-h-[60vh] lg:max-h-none"
                       loading="lazy"
                     />
-                    {/* Always visible overlay */}
+
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3 lg:p-6 opacity-100 transition-opacity duration-300">
                       <div>
                         <span className="inline-block px-2 py-0.5 sm:px-3 lg:py-1 bg-[#0C5A2D] text-white text-[10px] sm:text-xs font-medium rounded-full mb-1 sm:mb-2">
@@ -205,7 +202,6 @@ const OurGallery = () => {
             </div>
           </div>
 
-          {/* Dots */}
           <div className="flex justify-center gap-2 mt-8">
             {dots.map((dot, idx) => (
               <button
@@ -222,7 +218,6 @@ const OurGallery = () => {
           </div>
         </div>
 
-        {/* Button */}
         <div className="text-center mt-12">
           <Link
             to="/portfolio"

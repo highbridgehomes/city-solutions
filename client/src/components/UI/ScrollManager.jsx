@@ -14,7 +14,6 @@ export default function ScrollManager() {
       const y = scrollPositions[path] || 0;
       window.scrollTo(0, y);
     } else {
-      // For push/replace navigation, scroll to top
       window.scrollTo(0, 0);
     }
 
