@@ -1,6 +1,7 @@
 import { FileText, ClipboardList, Shield, Banknote } from "lucide-react";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
+import { Helmet } from "react-helmet-async";
 
 const colors = {
   primary: "#0C5A2D",
@@ -13,29 +14,42 @@ const colors = {
 const TermsOfService = () => {
   return (
     <>
+      <Helmet>
+        <title>Terms of Service | Highbridge City Solutions</title>
+      </Helmet>
       <Navbar />
 
       <section className="font-inter py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center bg-green-100 text-green-800 rounded-full px-4 py-2 mb-4">
+            <div
+              data-aos="fade-down"
+              className="inline-flex items-center justify-center bg-green-100 text-green-800 rounded-full px-4 py-2 mb-4"
+            >
               <FileText className="h-5 w-5 mr-2" />
               <span className="font-medium">Terms of Service</span>
             </div>
-            <h2 className="font-playfair-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2
+              data-aos="zoom-in-up"
+              className="font-playfair-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+            >
               Our{" "}
               <span style={{ color: colors.primary }}>Terms & Conditions</span>
             </h2>
             <div
+              data-aos="fade-up"
               className="w-20 h-1 mx-auto mt-4"
               style={{ backgroundColor: colors.primary }}
             ></div>
-            <p className="text-gray-600 text-lg mt-6 max-w-3xl mx-auto">
+            <p
+              data-aos="fade-up"
+              className="text-gray-600 text-lg mt-6 max-w-3xl mx-auto"
+            >
               Please read these terms carefully before using our services.
             </p>
           </div>
 
-          <div className="prose prose-lg max-w-none">
+          <div data-aos="fade-up" className="prose prose-lg max-w-none">
             <div className="mb-12">
               <h3
                 className="text-xl sm:text-2xl font-bold mb-4 flex items-center"
@@ -88,7 +102,7 @@ const TermsOfService = () => {
               className="mt-16 p-6 rounded-xl"
               style={{ backgroundColor: colors.light }}
             >
-              <div className="flex items-start">
+              <div data-aos="fade-up" className="flex items-start">
                 <Shield
                   className="h-6 w-6 mt-1 mr-4 flex-shrink-0"
                   style={{ color: colors.primary }}

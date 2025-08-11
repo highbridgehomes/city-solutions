@@ -4,6 +4,7 @@ import { Award, Users, CheckCircle, Leaf, ArrowRight } from "lucide-react";
 import { IMAGES } from "../constants/images";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   const steps = [
@@ -74,26 +75,41 @@ const About = () => {
 
   return (
     <>
+      <Helmet>
+        <title>About Us | Highbridge City Solutions</title>
+      </Helmet>
       <Navbar />
       <section className="font-inter pt-18 pb-12 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative">
           <div className="flex flex-col items-center text-center">
-            <span className="inline-block px-5 py-2 bg-[#0C5A2D]/10 text-[#0C5A2D] rounded-full text-sm font-medium mb-6">
+            <span
+              data-aos="fade-down"
+              className="inline-block px-5 py-2 bg-[#0C5A2D]/10 text-[#0C5A2D] rounded-full text-sm font-medium mb-6"
+            >
               About Us
             </span>
 
-            <h2 className="font-playfair-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 max-w-4xl leading-tight">
+            <h2
+              data-aos="zoom-in-up"
+              className="font-playfair-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 max-w-4xl leading-tight"
+            >
               Designing <span className="text-[#0C5A2D]">Spaces</span>, Shaping{" "}
               <span className="text-[#0C5A2D]">Experiences</span>
             </h2>
 
-            <div className="flex items-center justify-center gap-4 mb-8">
+            <div
+              data-aos="fade-up"
+              className="flex items-center justify-center gap-4 mb-8"
+            >
               <div className="h-px bg-gray-300 w-16"></div>
               <div className="h-2 w-2 bg-[#0C5A2D] rounded-full"></div>
               <div className="h-px bg-gray-300 w-16"></div>
             </div>
 
-            <p className="text-gray-600 text-lg max-w-3xl leading-relaxed">
+            <p
+              data-aos="fade-up"
+              className="text-gray-600 text-lg max-w-3xl leading-relaxed"
+            >
               At{" "}
               <span className="font-semibold text-gray-900 mr-1">
                 Highbridge City Solutions
@@ -109,15 +125,21 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="px-4 sm:px-0">
-              <span className="text-lg md:text-xl mb-2 text-[#0d613d] font-semibold tracking-wider">
+              <span
+                data-aos="fade-up"
+                className="text-lg md:text-xl mb-2 text-[#0d613d] font-semibold tracking-wider"
+              >
                 OUR STORY
               </span>
 
-              <h2 className=" text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+              <h2
+                data-aos="fade-up"
+                className=" text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight"
+              >
                 Experienced Interior Design Company
               </h2>
 
-              <div className="space-y-6">
+              <div data-aos="fade-up" className="space-y-6">
                 <p className="text-gray-600 text-lg leading-relaxed">
                   We are passionate about transforming spaces into elegant,
                   functional, and inspiring environments that reflect the unique
@@ -155,7 +177,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div data-aos="fade-up" className="grid grid-cols-2 gap-4">
               <div className="relative h-64 sm:h-80 rounded-lg overflow-hidden group">
                 <img
                   src={IMAGES.aboutPage1}
@@ -192,7 +214,10 @@ const About = () => {
       <section className="font-inter py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+            <div
+              data-aos="fade-up"
+              className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+            >
               <h3 className="text-2xl font-bold text-[#0C5A2D] mb-4">VISION</h3>
               <p className="text-gray-700 text-lg">
                 To be Africa's leading provider of smart, sustainable
@@ -200,7 +225,10 @@ const About = () => {
                 city living.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+            <div
+              data-aos="fade-up"
+              className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+            >
               <h3 className="text-2xl font-bold text-[#0C5A2D] mb-4">
                 MISSION
               </h3>
@@ -229,7 +257,7 @@ const About = () => {
           ></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
+          <div data-aos="zoom-in-up" className="text-center mb-16">
             <h2 className="font-playfair-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
               Work With Us
             </h2>
@@ -243,7 +271,10 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            data-aos="fade-up"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
             {steps.map((step, index) => (
               <div
                 key={index}
@@ -262,7 +293,7 @@ const About = () => {
 
       <section className="font-inter py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div data-aos="zoom-in-up" className="text-center mb-16">
             <h2 className=" text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Why Highbridge City Solutions?
             </h2>
@@ -273,7 +304,10 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            data-aos="fade-up"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
             {features.map((feature, index) => (
               <div
                 key={index}
@@ -293,7 +327,7 @@ const About = () => {
             ))}
           </div>
 
-          <div className="mt-16 text-center">
+          <div data-aos="fade-up" className="mt-16 text-center">
             <p className="text-gray-700 text-lg max-w-3xl mx-auto mb-8">
               Backed by the credibility and innovation of the Highbridge Group,
               we specialize in delivering integrated urban solutions that

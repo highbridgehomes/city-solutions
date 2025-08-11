@@ -4,27 +4,41 @@ import { HardHat, Hammer, Box, Bed, Utensils } from "lucide-react";
 import { IMAGES } from "../constants/images";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
+import { Helmet } from "react-helmet-async";
 
 const Services = () => {
   return (
     <>
+      <Helmet>
+        <title>Services | Highbridge City Solutions</title>
+      </Helmet>
+
       <Navbar />
       <section className="font-inter pt-18 pb-12 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative">
           <div className="flex flex-col items-center text-center">
-            <span className="inline-block px-5 py-2 bg-[#0C5A2D]/10 text-[#0C5A2D] rounded-full text-sm font-medium mb-6">
+            <span
+              data-aos="fade-down"
+              className="inline-block px-5 py-2 bg-[#0C5A2D]/10 text-[#0C5A2D] rounded-full text-sm font-medium mb-6"
+            >
               Our Services
             </span>
-            <h2 className="font-playfair-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 max-w-4xl leading-tight">
+            <h2
+              data-aos="zoom-in-up"
+              className="font-playfair-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 max-w-4xl leading-tight"
+            >
               Transforming Spaces with
               <span className="text-[#0C5A2D]"> Expert Craftsmanship</span>
             </h2>
-            <div className="flex items-center justify-center gap-4 mb-8">
+            <div
+              data-aos="fade-up"
+              className="flex items-center justify-center gap-4 mb-8"
+            >
               <div className="h-px bg-gray-300 w-16"></div>
               <div className="h-2 w-2 bg-[#0C5A2D] rounded-full"></div>
               <div className="h-px bg-gray-300 w-16"></div>
             </div>
-            <p className="text-gray-600 text-lg max-w-3xl">
+            <p data-aos="fade-up" className="text-gray-600 text-lg max-w-3xl">
               Discover our comprehensive range of construction and interior
               design services. From renovation projects to custom metalwork and
               bespoke furniture, we deliver exceptional quality with meticulous
@@ -37,7 +51,10 @@ const Services = () => {
       <section className="font-inter py-10 sm:py-16 bg-[#F8FAF8]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
           <div>
-            <div className="relative h-96 w-full rounded-2xl overflow-hidden mb-12 shadow-xl">
+            <div
+              data-aos="fade-right"
+              className="relative h-96 w-full rounded-2xl overflow-hidden mb-12 shadow-xl"
+            >
               <img
                 src={IMAGES.renovation1}
                 className="w-full h-full object-cover"
@@ -60,7 +77,10 @@ const Services = () => {
                     </h3>
                   </div>
                 </div>
-                <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+                <p
+                  data-aos="fade-up"
+                  className="text-gray-600 text-base sm:text-lg leading-relaxed"
+                >
                   From concept to completion, we bring spaces back to life with
                   precision and style. Our renovation and construction services
                   cover everything from structural upgrades to full-scale
@@ -84,7 +104,10 @@ const Services = () => {
       <section className="font-inter py-8 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
           <div>
-            <div className="relative h-96 w-full rounded-2xl overflow-hidden mb-12 shadow-xl">
+            <div
+              data-aos="fade-right"
+              className="relative h-96 w-full rounded-2xl overflow-hidden mb-12 shadow-xl"
+            >
               <img
                 src={IMAGES.metalWork1}
                 alt="Metal Work"
@@ -108,7 +131,10 @@ const Services = () => {
                     </h3>
                   </div>
                 </div>
-                <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+                <p
+                  data-aos="fade-up"
+                  className="text-gray-600 text-base sm:text-lg leading-relaxed"
+                >
                   We craft durable, elegant, and functional metal solutions for
                   both residential and commercial needs. Our metalwork includes
                   gates, railings, window protectors, steel structures, and more
@@ -132,7 +158,10 @@ const Services = () => {
       <section className="font-inter py-10 sm:py-16 bg-[#F8FAF8]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
           <div>
-            <div className="relative h-96 w-full rounded-2xl overflow-hidden mb-12 shadow-xl">
+            <div
+              data-aos="fade-right"
+              className="relative h-96 w-full rounded-2xl overflow-hidden mb-12 shadow-xl"
+            >
               <img
                 src={IMAGES.kitchen1}
                 alt="Kitchen Set"
@@ -156,7 +185,10 @@ const Services = () => {
                     </h3>
                   </div>
                 </div>
-                <p className="text-gray-600 text-base sm:text-lg  leading-relaxed">
+                <p
+                  data-aos="fade-up"
+                  className="text-gray-600 text-base sm:text-lg  leading-relaxed"
+                >
                   Your kitchen deserves the perfect blend of beauty and
                   function. Our custom kitchen sets are designed to maximize
                   space, improve workflow, and elevate your lifestyle. We offer
@@ -181,7 +213,10 @@ const Services = () => {
       <section className="font-inter py-10 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
           <div>
-            <div className="relative h-96 w-full rounded-2xl overflow-hidden mb-12 shadow-xl">
+            <div
+              data-aos="fade-right"
+              className="relative h-96 w-full rounded-2xl overflow-hidden mb-12 shadow-xl"
+            >
               <img
                 src={IMAGES.bedroomService1}
                 alt="Bedroom"
@@ -205,7 +240,10 @@ const Services = () => {
                     </h3>
                   </div>
                 </div>
-                <p className="text-gray-600 text-base sm:text-lg  leading-relaxed">
+                <p
+                  data-aos="fade-up"
+                  className="text-gray-600 text-base sm:text-lg  leading-relaxed"
+                >
                   We create serene, stylish bedroom solutions tailored to your
                   personal taste and space. From wardrobes and bed frames to
                   lighting and layouts, our bedroom interiors are crafted for
@@ -230,7 +268,10 @@ const Services = () => {
       <section className="font-inter py-10 sm:py-16 bg-[#F8FAF8]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
           <div>
-            <div className="relative h-96 w-full rounded-2xl overflow-hidden mb-12 shadow-xl">
+            <div
+              data-aos="fade-right"
+              className="relative h-96 w-full rounded-2xl overflow-hidden mb-12 shadow-xl"
+            >
               <img
                 src={IMAGES.handmade1}
                 alt="Handmade Products"
@@ -254,7 +295,10 @@ const Services = () => {
                     </h3>
                   </div>
                 </div>
-                <p className="text-gray-600 text-base sm:text-lg  leading-relaxed">
+                <p
+                  data-aos="fade-up"
+                  className="text-gray-600 text-base sm:text-lg  leading-relaxed"
+                >
                   Our handmade collections showcase the art of craftsmanship.
                   Each item—be it furniture, décor, or utility pieces—is
                   uniquely designed and manually crafted with attention to
@@ -277,7 +321,10 @@ const Services = () => {
       </section>
 
       <section className="font-inter py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+        <div
+          data-aos="fade-up"
+          className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10"
+        >
           <div className="text-center mb-16">
             <h2 className="font-satoshi text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Our Working Process

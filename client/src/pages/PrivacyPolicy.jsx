@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Lock, Shield, Mail, Phone } from "lucide-react";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
+import { Helmet } from "react-helmet-async";
 
 const colors = {
   primary: "#0C5A2D",
@@ -14,30 +15,44 @@ const colors = {
 const PrivacyPolicy = () => {
   return (
     <>
+      <Helmet>
+        <title>Privacy Policy | Highbridge City Solutions</title>
+      </Helmet>
       <Navbar />
 
       <section className="font-inter py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center bg-green-100 text-green-800 rounded-full px-4 py-2 mb-4">
+            <div
+              data-aos="fade-down"
+              className="inline-flex items-center justify-center bg-green-100 text-green-800 rounded-full px-4 py-2 mb-4"
+            >
               <Lock className="h-5 w-5 mr-2" />
               <span className="font-medium">Privacy Policy</span>
             </div>
-            <h2 className="font-playfair-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2
+              data-aos="zoom-in-up"
+              className="font-playfair-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+            >
               Your{" "}
               <span style={{ color: colors.primary }}>Privacy Matters</span>
             </h2>
             <div
+              data-aos="fade-up"
               className="w-20 h-1 mx-auto mt-4"
               style={{ backgroundColor: colors.primary }}
             ></div>
-            <p className="text-gray-600 text-lg mt-6 max-w-3xl mx-auto">
+            <p
+              data-aos="fade-up"
+              className="text-gray-600 text-lg mt-6 max-w-3xl mx-auto"
+            >
               We are committed to protecting your personal information and being
               transparent about what we collect.
             </p>
           </div>
 
           <div
+            data-aos="fade-up"
             className="prose prose-lg max-w-none"
             style={{ color: colors.primary }}
           >
@@ -103,13 +118,11 @@ const PrivacyPolicy = () => {
               </ul>
             </div>
 
-            {/* Continue with other sections... */}
-
             <div
               className="mt-16 p-6 rounded-xl"
               style={{ backgroundColor: colors.light }}
             >
-              <div className="flex items-start">
+              <div data-aos="fade-up" className="flex items-start">
                 <Shield
                   className="h-6 w-6 mt-1 mr-4 flex-shrink-0"
                   style={{ color: colors.primary }}

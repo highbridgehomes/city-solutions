@@ -61,10 +61,16 @@ const Contact = () => {
         <div className="relative z-20 h-full flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white w-full py-12">
             <div className="max-w-2xl mx-auto text-center sm:text-left">
-              <h1 className="font-playfair-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight">
+              <h1
+                data-aos="fade-down"
+                className="font-playfair-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight"
+              >
                 Contact Us
               </h1>
-              <p className="text-lg sm:text-xl mb-10 opacity-90 leading-relaxed max-w-xl mx-auto sm:mx-0">
+              <p
+                data-aos="fade-up"
+                className="text-lg sm:text-xl mb-10 opacity-90 leading-relaxed max-w-xl mx-auto sm:mx-0"
+              >
                 Have a question, proposal, or project in mind? We'd love to hear
                 from you.
               </p>
@@ -76,7 +82,10 @@ const Contact = () => {
       <section className="font-inter py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-gray-50 py-8 px-4 rounded-xl shadow-sm">
+            <div
+              data-aos="fade-up"
+              className="bg-gray-50 py-8 px-4 rounded-xl shadow-sm"
+            >
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Tell us about your dream
               </h2>
@@ -151,7 +160,10 @@ const Contact = () => {
               </form>
             </div>
 
-            <div className="bg-gray-50 py-8 px-4 rounded-xl shadow-sm">
+            <div
+              data-aos="fade-up"
+              className="bg-gray-50 py-8 px-4 rounded-xl shadow-sm"
+            >
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Reach out to us today
               </h2>
@@ -159,7 +171,7 @@ const Contact = () => {
                 Whether you're looking to partner, invest, or inquire about our
                 services. Let's build the future of cities together.
               </p>
-              <div className="bg-gray-50 p-6 rounded-xl space-y-6">
+              <div className="bg-gray-50 pt-6 rounded-xl space-y-6">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="bg-[#0C5A2D]/10 p-3 rounded-full">
                     <MapPin className="h-6 w-6 text-[#0C5A2D]" />

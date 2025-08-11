@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import { IMAGES } from "../constants/images";
+import { Helmet } from "react-helmet-async";
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -158,6 +159,10 @@ const Portfolio = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Portfolio | Highbridge City Solutions</title>
+      </Helmet>
+
       <Navbar />
 
       <section className="font-inter relative h-[50vh] md:h-[70vh] overflow-hidden">
@@ -170,10 +175,16 @@ const Portfolio = () => {
         <div className="relative z-20 h-full flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white w-full py-12">
             <div className="max-w-2xl mx-auto text-center sm:text-left">
-              <h1 className="font-playfair-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight">
+              <h1
+                data-aos="fade-down"
+                className="font-playfair-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight"
+              >
                 Our Portfolio
               </h1>
-              <p className="text-lg sm:text-xl mb-10 opacity-90 leading-relaxed max-w-xl mx-auto sm:mx-0">
+              <p
+                data-aos="fade-up"
+                className="text-lg sm:text-xl mb-10 opacity-90 leading-relaxed max-w-xl mx-auto sm:mx-0"
+              >
                 Explore our collection of beautifully designed spaces that
                 showcase our expertise and creativity.
               </p>

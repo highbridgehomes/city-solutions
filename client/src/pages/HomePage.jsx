@@ -24,7 +24,7 @@ const colors = {
   primary: "#0C5A2D",
   secondary: "#1D7A4C",
   accent: "#2E9D64",
-  light: "#E8F5E9",
+  light: "#F1F7F3",
   muted: "#A5D6A7",
 };
 
@@ -66,14 +66,12 @@ const HomePage = () => {
       title: "Highbridge City Solutions Interior Designs",
       description: "Modern luxury apartment redesign",
       videoId: "ZeCICKlFsNc",
-      slug: "lekki-penthouse",
       thumbnail: "https://img.youtube.com/vi/ZeCICKlFsNc/maxresdefault.jpg",
     },
     {
       title: "Ongoing Interior Design at Highbridge Residences",
       description: "Contemporary workspace design",
       videoId: "Toqrh84i2Zk",
-      slug: "victoria-island-office",
       thumbnail: "https://img.youtube.com/vi/Toqrh84i2Zk/maxresdefault.jpg",
     },
     {
@@ -81,7 +79,6 @@ const HomePage = () => {
       description:
         "Elegant interior design featuring timeless aesthetics and styling throughout the residence.",
       videoId: "cfo20chkKck",
-      slug: "ikoyi-residence",
       thumbnail: "https://img.youtube.com/vi/cfo20chkKck/maxresdefault.jpg",
     },
   ];
@@ -172,16 +169,25 @@ const HomePage = () => {
         <div className="relative z-20 h-full flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white w-full py-12">
             <div className="max-w-2xl mx-auto text-center sm:text-left">
-              <h1 className="font-playfair-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight">
+              <h1
+                data-aos="fade-right"
+                className="font-playfair-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight"
+              >
                 Transforming Spaces. <br className="hidden sm:block" />
                 Elevating Lifestyles
               </h1>
-              <p className="text-lg sm:text-xl mb-10 opacity-90 leading-relaxed max-w-xl mx-auto sm:mx-0">
+              <p
+                data-aos="fade-right"
+                className="text-lg sm:text-xl mb-10 opacity-90 leading-relaxed max-w-xl mx-auto sm:mx-0"
+              >
                 Premier interior design company in Lagos, transforming
                 residential and commercial spaces with style, precision, and
                 passion.
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3 sm:gap-4">
+              <div
+                data-aos="fade-up"
+                className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3 sm:gap-4"
+              >
                 <button
                   onClick={scrollToProjects}
                   className="inline-flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 border-2 border-white/20 text-white px-6 py-3 sm:px-7 sm:py-4 font-medium transition-all duration-300 hover:scale-[1.02] active:scale-95 text-base whitespace-nowrap group"
@@ -217,6 +223,7 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24 sm:mb-32">
             <h2
+              data-aos="fade-up"
               className="text-3xl md:text-4xl lg:text-5xl font-bold"
               style={{ color: colors.primary }}
             >
@@ -224,13 +231,14 @@ const HomePage = () => {
               <span className="text-gray-900"> Highbridge Interior Design</span>
             </h2>
             <div
+              data-aos="fade-up"
               className="w-20 h-1"
               style={{ backgroundColor: colors.primary, margin: "1rem auto" }}
             ></div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="px-4 sm:px-0">
+            <div data-aos="fade-right" className="px-4 sm:px-0">
               <span
                 className="text-lg md:text-xl mb-2 font-semibold tracking-wider"
                 style={{ color: colors.primary }}
@@ -299,7 +307,7 @@ const HomePage = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div data-aos="fade-up" className="grid grid-cols-2 gap-4">
               <div className="relative h-64 sm:h-80 rounded-lg overflow-hidden group">
                 <img
                   src={IMAGES.aboutlibHome1}
@@ -333,12 +341,12 @@ const HomePage = () => {
       </section>
 
       <section
-        className="font-inter py-24 md:py-32"
+        className="font-inter pt-12 pb-24 md:pt-32 md:pb-32"
         style={{ backgroundColor: colors.light }}
         id="projects-section"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div data-aos="fade-up" className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Our <span style={{ color: colors.primary }}>Design Services</span>
             </h2>
@@ -352,7 +360,10 @@ const HomePage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            data-aos="fade-up"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
             {services.map((service, index) => (
               <div
                 key={index}
@@ -403,7 +414,10 @@ const HomePage = () => {
 
       <section className="font-inter pt-24 sm:pt-40 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
+          <div
+            data-aos="fade-right"
+            className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8"
+          >
             <div className="max-w-2xl">
               <span
                 className="inline-block px-4 py-2 rounded-full text-sm font-medium mb-4"
@@ -425,7 +439,10 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            data-aos="fade-up"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
             {projects.map((project, index) => (
               <div
                 key={index}
@@ -502,17 +519,26 @@ const HomePage = () => {
             </span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h2
+            data-aos="fade-up"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+          >
             Ready to Transform
             <span style={{ color: colors.muted }}> Your Space?</span>
           </h2>
 
-          <p className="text-xl sm:text-2xl mb-12 opacity-90 max-w-3xl mx-auto font-light">
+          <p
+            data-aos="fade-up"
+            className="text-xl sm:text-2xl mb-12 opacity-90 max-w-3xl mx-auto font-light"
+          >
             Contact our team of design experts to discuss your project
             requirements and vision.
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+          <div
+            data-aos="fade-up"
+            className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6"
+          >
             <Link
               to="/contact"
               className="relative group bg-white hover:bg-gray-50 px-8 py-4 rounded-full font-medium transition-all duration-300 hover:shadow-2xl hover:-translate-y-0.5"
@@ -548,6 +574,7 @@ const HomePage = () => {
           </div>
 
           <div
+            data-aos="fade-up"
             className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm"
             style={{ color: "rgba(255,255,255,0.7)" }}
           >
@@ -607,21 +634,31 @@ const HomePage = () => {
       <section className="font-inter py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2
+              data-aos="fade-up"
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+            >
               Meet Our Partners
             </h2>
             <div
+              data-aos="fade-up"
               className="w-20 h-1 mx-auto mt-4"
               style={{ backgroundColor: colors.primary }}
             ></div>
-            <p className="text-gray-700 text-lg mt-6 max-w-5xl mx-auto">
+            <p
+              data-aos="fade-up"
+              className="text-gray-700 text-lg mt-6 max-w-5xl mx-auto"
+            >
               At Highbridge Interior Design, we collaborate with trusted
               partners who share our commitment to excellence in design and
               craftsmanship.
             </p>
           </div>
 
-          <div className="max-w-3xl px-4 sm:px-0 mx-auto grid grid-cols-3 gap-4 sm:gap-8">
+          <div
+            data-aos="fade-up"
+            className="max-w-3xl px-4 sm:px-0 mx-auto grid grid-cols-3 gap-4 sm:gap-8"
+          >
             {partners.map((partner, index) => (
               <div
                 key={index}
